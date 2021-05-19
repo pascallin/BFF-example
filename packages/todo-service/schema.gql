@@ -1,0 +1,46 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+directive @key(fields: String!) on OBJECT | INTERFACE
+
+directive @extends on OBJECT | INTERFACE
+
+directive @external on OBJECT | FIELD_DEFINITION
+
+directive @requires(fields: String!) on FIELD_DEFINITION
+
+directive @provides(fields: String!) on FIELD_DEFINITION
+
+type User {
+  id: ID!
+  todolist: [Todo!]!
+}
+
+type Todo {
+  id: ID!
+  title: String!
+  description: String
+  creationDate: Date!
+  userId: Float!
+  user: User!
+}
+
+"""Date custom scalar type"""
+scalar Date
+
+type Query {
+  todoItem(id: String!): Todo!
+  todolist(skip: Int = 0, take: Int = 25): [Todo!]!
+}
+
+type Mutation {
+  addTodoItem(newTodoData: NewTodoInput!): Todo!
+  removeTodoItem(id: String!): Boolean!
+}
+
+input NewTodoInput {
+  userId: Float!
+  title: String!
+  description: String
+}
