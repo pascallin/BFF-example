@@ -2,7 +2,6 @@
   "name": "bff-example",
   "version": "1.0.0",
   "description": "a BFF full stack example",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lerna run --stream --parallel start:dev"
