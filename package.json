@@ -1,0 +1,29 @@
+{
+  "name": "bff-example",
+  "version": "1.0.0",
+  "description": "a BFF full stack example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lerna run --stream --parallel start:dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pascallin/BFF-example.git"
+  },
+  "keywords": [
+    "nestjs",
+    "BFF",
+    "apollo",
+    "GraphQL"
+  ],
+  "author": "pascal_lin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pascallin/BFF-example/issues"
+  },
+  "homepage": "https://github.com/pascallin/BFF-example#readme",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
